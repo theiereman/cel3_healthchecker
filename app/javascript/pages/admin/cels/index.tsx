@@ -1,25 +1,20 @@
+import { CelCard } from "../../../components/cels/admin/CelCard.tsx";
+import { useTheme } from "../../../hooks/useTheme.ts";
+import { Cel } from "../../../interfaces/cel/cel.ts";
 
-import {CelCard} from "../../../components/cels/admin/CelCard.tsx";
-import {useTheme} from "../../../hooks/useTheme.ts";
+function Index({ cels }: { cels: Cel[] }) {
+  const {} = useTheme();
 
-export default function Index({cels}) {
-    const {_, toggleTheme } = useTheme();
-
-    return (
-        <>
-            <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 flex-1">
-                Administration des CELs
-            </h1>
-
-            <main className="flex flex-col gap-2">
-                {cels.map((cel) => (
-                    <CelCard
-                        key={cel.id}
-                        cel={cel}
-                    />
-                ))}
-            </main>
-        </>
-    );
+  return (
+    <div className="flex flex-col gap-2 xl:max-w-2/3 mx-auto">
+      {cels.map((cel: Cel) => (
+        <CelCard key={cel.id} cel={cel} />
+      ))}
+      <div className={"m-2"}>
+        <CelCard />
+      </div>
+    </div>
+  );
 }
 
+export default Index;
