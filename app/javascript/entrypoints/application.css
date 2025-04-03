@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root.dark {
+    background-color: #1a202c;
+}
