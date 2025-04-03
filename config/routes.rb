@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-  resources :cels do
+  resources :cels, only: [:index] do
     member do
       get "healthcheck"
     end
   end
+
+  namespace :admin do
+    resources :cels, except: [:show]
+  end
+
   get 'inertia-example', to: 'inertia_example#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

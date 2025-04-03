@@ -1,14 +1,16 @@
 import {Toggle} from "../../components/ui/Toggle.tsx";
-import HealthCard from "../../components/HealthCard.tsx";
+import HealthCard from "../../components/cels/HealthCard.tsx";
 import {useEffect, useState} from "react";
 import {useTheme} from "../../hooks/useTheme.ts";
 import {Cel} from "../../interfaces/cel/cel.ts";
 
 const REFRESH_INTERVAL = 10;
 
+
+
 export default function Index({cels}) {
     const [sortedCels, setSortedCels] = useState(cels);
-    const { isDarkMode, toggleTheme } = useTheme();
+    const {isDarkMode, toggleTheme } = useTheme();
     const [autoRefresh, setAutoRefresh] = useState(false);
     const [refreshIntervalCountdown, setRefreshIntervalCountdown] =
         useState(REFRESH_INTERVAL);

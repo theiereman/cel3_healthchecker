@@ -1,12 +1,12 @@
 import { capitalize } from "lodash";
-import ServicePill from "./ServicePill";
-import useHealthCheck from "../hooks/useHealthCheck";
-import { HealthCheckStatus } from "../interfaces/health/healthCheckStatus";
-import StatusIndicator from "./StatusIndicator";
-import HealthCheckHeader from "./HealthCheckHeader";
+import ServicePill from "./ServicePill.tsx";
+import useHealthCheck from "../../hooks/useHealthCheck.ts";
+import { HealthCheckStatus } from "../../interfaces/health/healthCheckStatus.ts";
+import StatusIndicator from "./StatusIndicator.tsx";
+import HealthCheckHeader from "./HealthCheckHeader.tsx";
 import { useEffect } from "react";
-import HealthCardSkeleton from "./HealthCardSkelton";
-import {Cel} from "../interfaces/cel/cel.ts";
+import HealthCardSkeleton from "./HealthCardSkelton.tsx";
+import {Cel} from "../../interfaces/cel/cel.ts";
 
 export default function HealthCard({
   cel,
