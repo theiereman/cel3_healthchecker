@@ -1,5 +1,5 @@
 class Admin::CelsController < ApplicationController
-  before_action :set_cel, only: %i[ update destroy ]
+  http_basic_authenticate_with name: Rails.application.credentials.admin_auth.username, password: Rails.application.credentials.admin_auth.password
   use_inertia_instance_props
 
   def index
