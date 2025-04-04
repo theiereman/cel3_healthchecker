@@ -1,38 +1,17 @@
-import { Toggle } from "../../components/ui/Toggle.tsx";
 import HealthCard from "../../components/cels/HealthCard.tsx";
-import { useEffect, useState } from "react";
 import { useTheme } from "../../hooks/useTheme.ts";
 import { Cel } from "../../interfaces/cel/cel.ts";
+import AutoRefreshToggle from "../../components/cels/AutoRefreshToggle.tsx";
+import { useState } from "react";
 
-const REFRESH_INTERVAL = 10;
-
-function Index({ cels }) {
+function Index({ cels }: { cels: Cel[] }) {
   const [sortedCels, setSortedCels] = useState(cels);
   useTheme();
-  const [autoRefresh, setAutoRefresh] = useState(false);
-  const [refreshIntervalCountdown, setRefreshIntervalCountdown] =
-    useState(REFRESH_INTERVAL);
 
-  useEffect(() => {
-    if (!autoRefresh) {
-      setRefreshIntervalCountdown(REFRESH_INTERVAL);
-      return;
-    }
-
-    const interval = setInterval(async () => {
-      setRefreshIntervalCountdown((prev) => {
-        if (prev === 1) {
-          return REFRESH_INTERVAL;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [autoRefresh]);
-
-  const handleAutoRefreshChange = () => {
-    setAutoRefresh(!autoRefresh);
+  const [refreshTrigger, setRefreshTrigger] = useState(false);
+  const handleRefresh = () => {
+    console.log("refresh trigger");
+    setRefreshTrigger((prev) => !prev);
   };
 
   const handleStatusChange = (cel: Cel, isOk: boolean) => {
@@ -52,18 +31,14 @@ function Index({ cels }) {
 
   return (
     <>
-      <Toggle
-        label={`Auto-refresh (${refreshIntervalCountdown}s)`}
-        onToggle={handleAutoRefreshChange}
-      ></Toggle>
-
+      <AutoRefreshToggle onCountdownOver={handleRefresh} />
       <div className="flex flex-col gap-4">
         {sortedCels.map((cel) => (
           <HealthCard
             key={cel.id}
             cel={cel}
             onStatusChange={(isOk) => handleStatusChange(cel, isOk)}
-            refreshInterval={autoRefresh ? REFRESH_INTERVAL : null}
+            shouldRefresh={refreshTrigger}
           />
         ))}
       </div>

@@ -11,36 +11,28 @@ import { Cel } from "../../interfaces/cel/cel.ts";
 export default function HealthCard({
   cel,
   onStatusChange,
-  refreshInterval = null,
+  shouldRefresh,
 }: {
   cel: Cel;
   onStatusChange?: (isOk: boolean) => void;
-  refreshInterval?: number | null;
+  shouldRefresh?: boolean;
 }) {
   const { health, loading, error, refresh } = useHealthCheck({ cel });
 
   const isOk = error === null && health?.status === HealthCheckStatus.Healthy;
   const hasCheckerErrors = health?.checkers?.some(
-    (checker) => checker.status === HealthCheckStatus.Unhealthy,
+    (checker) => checker.status === HealthCheckStatus.Unhealthy
   );
+
+  useEffect(() => {
+    refresh();
+  }, [shouldRefresh]);
 
   useEffect(() => {
     if (onStatusChange) {
       onStatusChange(isOk);
     }
   }, [isOk]);
-
-  useEffect(() => {
-    if (refreshInterval === null) {
-      return;
-    }
-
-    const interval = setInterval(async () => {
-      await refresh();
-    }, 1000 * refreshInterval);
-
-    return () => clearInterval(interval);
-  }, [refreshInterval]);
 
   return (
     <div
@@ -88,7 +80,6 @@ export default function HealthCard({
           </div>
           <button onClick={refresh}>
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 -960 960 960"
               className="size-8 fill-current hover:animate-spin cursor-pointer text-slate-900 dark:text-slate-100"
             >
