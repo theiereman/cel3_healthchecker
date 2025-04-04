@@ -8,3 +8,7 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+:root.dark {
+    background-color: #1a202c;
+}

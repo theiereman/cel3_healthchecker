@@ -1,0 +1,2 @@
+module Admin::CelsHelper
+end

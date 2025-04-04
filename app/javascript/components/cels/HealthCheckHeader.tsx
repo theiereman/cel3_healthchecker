@@ -1,4 +1,4 @@
-import {Cel} from "../interfaces/cel/cel.ts";
+import {Cel} from "../../interfaces/cel/cel.ts";
 
 export default function HealthCheckHeader({
   cel,

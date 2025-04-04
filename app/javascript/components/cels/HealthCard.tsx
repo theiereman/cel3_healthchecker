@@ -1,12 +1,12 @@
 import { capitalize } from "lodash";
-import ServicePill from "./ServicePill";
-import useHealthCheck from "../hooks/useHealthCheck";
-import { HealthCheckStatus } from "../interfaces/health/healthCheckStatus";
-import StatusIndicator from "./StatusIndicator";
-import HealthCheckHeader from "./HealthCheckHeader";
+import ServicePill from "./ServicePill.tsx";
+import useHealthCheck from "../../hooks/useHealthCheck.ts";
+import { HealthCheckStatus } from "../../interfaces/health/healthCheckStatus.ts";
+import StatusIndicator from "./StatusIndicator.tsx";
+import HealthCheckHeader from "./HealthCheckHeader.tsx";
 import { useEffect } from "react";
-import HealthCardSkeleton from "./HealthCardSkelton";
-import {Cel} from "../interfaces/cel/cel.ts";
+import HealthCardSkeleton from "./HealthCardSkelton.tsx";
+import { Cel } from "../../interfaces/cel/cel.ts";
 
 export default function HealthCard({
   cel,
@@ -21,7 +21,7 @@ export default function HealthCard({
 
   const isOk = error === null && health?.status === HealthCheckStatus.Healthy;
   const hasCheckerErrors = health?.checkers?.some(
-    (checker) => checker.status === HealthCheckStatus.Unhealthy
+    (checker) => checker.status === HealthCheckStatus.Unhealthy,
   );
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function HealthCard({
   return (
     <div
       id="health-card"
-      className="border p-4 m-4 rounded-lg flex gap-6 items-center bg-neutral-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100"
+      className="border p-4 rounded-lg flex gap-6 items-center bg-neutral-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100"
     >
       {!loading ? (
         <>
