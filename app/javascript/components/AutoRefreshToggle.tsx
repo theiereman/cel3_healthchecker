@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Toggle } from "../ui/Toggle";
-import { TimeUnitEnum } from "../../enums/TimeUnitEnum";
-import { TimeHelper } from "../../lib/helpers/timeHelper";
+import { Toggle } from "./ui/Toggle";
+import { TimeUnitEnum } from "../enums/TimeUnitEnum";
+import { TimeHelper } from "../lib/helpers/timeHelper";
 
 interface AutoRefreshToggleProps {
   onCountdownOver: () => void;

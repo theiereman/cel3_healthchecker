@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function StatusIndicator({ isOk }: { isOk: boolean }) {
   return (
     <div

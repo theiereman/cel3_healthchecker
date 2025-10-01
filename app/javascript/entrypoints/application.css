@@ -6,5 +6,5 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root.dark {
-    background-color: #1a202c;
+  background-color: #1a202c;
 }

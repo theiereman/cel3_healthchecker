@@ -1,4 +1,4 @@
-import { Cel } from "../../../interfaces/cel/cel.ts";
+import { Cel } from "../../interfaces/cel/cel.ts";
 import { Link, useForm } from "@inertiajs/react";
 import { FormEvent, useState } from "react";
 

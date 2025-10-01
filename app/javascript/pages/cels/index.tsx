@@ -1,7 +1,7 @@
-import HealthCard from "../../components/cels/HealthCard.tsx";
+import HealthCard from "../../components/HealthCard.tsx";
 import { useTheme } from "../../hooks/useTheme.ts";
 import { Cel } from "../../interfaces/cel/cel.ts";
-import AutoRefreshToggle from "../../components/cels/AutoRefreshToggle.tsx";
+import AutoRefreshToggle from "../../components/AutoRefreshToggle.tsx";
 import { useState } from "react";
 
 function Index({ cels }: { cels: Cel[] }) {

@@ -18,7 +18,6 @@ export default function useHealthCheck({ cel }: { cel: Cel }) {
     try {
       const response = await fetch(`cels/${cel.id}/healthcheck`);
       const data = await response.json();
-      console.log("cel data :", data);
       const formattedCheckers: CheckerInfo[] = Object.entries(data)
         .filter(
           ([, value]) =>

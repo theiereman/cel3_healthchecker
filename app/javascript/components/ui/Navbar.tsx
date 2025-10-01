@@ -5,8 +5,6 @@ const Navbar = () => {
   const { url } = usePage();
   const { isDarkMode, toggleTheme } = useTheme();
 
-  console.log(url);
-
   return (
     <nav className="rounded-lg bg-stone-100 dark:bg-slate-800 p-4 px-6 flex items-center gap-6 text-slate-900 dark:text-slate-100">
       <div className="flex flex-1 gap-6">

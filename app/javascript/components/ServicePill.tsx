@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function ServicePill({
   name,
   healthy,
@@ -11,12 +9,12 @@ export default function ServicePill({
 }) {
   return (
     <div
-      className={`rounded-full px-4 py-1 text-black ${
+      className={`rounded-full px-4 py-1 text-white ${
         disabled
           ? "bg-gray-300 text-gray-400"
           : healthy
-          ? "bg-green-400"
-          : "bg-red-400"
+            ? "bg-green-500"
+            : "bg-red-500"
       }`}
     >
       <span>{name}</span>

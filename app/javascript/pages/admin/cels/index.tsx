@@ -1,4 +1,4 @@
-import { CelCard } from "../../../components/cels/admin/CelCard.tsx";
+import { CelCard } from "../../../components/admin/CelCard.tsx";
 import { useTheme } from "../../../hooks/useTheme.ts";
 import { Cel } from "../../../interfaces/cel/cel.ts";
 
@@ -10,9 +10,7 @@ function Index({ cels }: { cels: Cel[] }) {
       {cels.map((cel: Cel) => (
         <CelCard key={cel.id} cel={cel} />
       ))}
-      <div className={"m-2"}>
-        <CelCard />
-      </div>
+      <CelCard />
     </div>
   );
 }
