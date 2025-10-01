@@ -12,20 +12,20 @@ const Navbar = () => {
           href="/"
           className={`hover:text-gray-300 ${url === "/" ? "font-bold" : ""}`}
         >
-          Home
+          Accueil
         </Link>
         <Link
           href="/admin/cels"
           className={`hover:text-gray-300 ${url === "/admin/cels" ? "font-bold" : ""}`}
         >
-          Admin
+          Administration
         </Link>
       </div>
       <button
         className="theme-toggle p-1 px-2 rounded-lg bg-neutral-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100"
         onClick={toggleTheme}
       >
-        Switch to {isDarkMode ? "light mode" : "dark mode"}
+        Passer en mode {isDarkMode ? "clair" : "sombre"}
       </button>
     </nav>
   );

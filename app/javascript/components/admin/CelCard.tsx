@@ -51,7 +51,7 @@ export const CelCard = ({ cel }: { cel?: Cel | undefined }) => {
           <button
             type="submit"
             disabled={processing}
-            className={`${cel === undefined ? "bg-green-700" : "bg-blue-500"} p-2 rounded-lg text-slate-900 dark:text-slate-100`}
+            className={`${cel === undefined ? "bg-green-500" : "bg-blue-500"} p-2 rounded-lg text-white`}
           >
             {cel === undefined ? "Ajouter" : "Mettre à jour"}{" "}
           </button>
@@ -61,7 +61,7 @@ export const CelCard = ({ cel }: { cel?: Cel | undefined }) => {
             href={`/admin/cels/${cel.id}`}
             method={"delete"}
             data={{ cel: { name: cel.name, url: cel.url } }}
-            className="bg-red-700 p-2 rounded-lg text-slate-900 dark:text-slate-100"
+            className="bg-red-500 p-2 rounded-lg text-white"
           >
             Supprimer
           </Link>

@@ -63,7 +63,7 @@ export default function AutoRefreshToggle({
 
   return (
     <div className="flex items-center gap-2 my-2 text-gray-700 dark:text-gray-300">
-      <Toggle onToggle={onToggle} label="Auto-refresh every " />
+      <Toggle onToggle={onToggle} label="Mettre à jour toutes les " />
       <input
         type="text"
         value={duration}
