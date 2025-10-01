@@ -1,3 +1,31 @@
-<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="256" cy="256" r="256" fill="red"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-19fae000-51ee-4d08-a48f-d8f733b2b615" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 105.75 132">
+  <defs>
+    <style>
+      .uuid-e09cb583-45af-4e2e-aa9c-d572a504e458 {
+        fill: url(#uuid-09bb8713-f2ab-4fdb-9a8d-78377ed7915a);
+      }
+
+      .uuid-1165956d-f8c8-4be3-b0e2-6e0600f759a2 {
+        fill: url(#uuid-d98107ef-b5e9-441b-b7ae-a6fb46dba6f0);
+      }
+
+      .uuid-3da07e65-1736-45ef-8b57-21d421250c2c {
+        fill: url(#uuid-75a478dc-28f1-429d-9e6b-8c3838dd8620);
+      }
+    </style>
+    <linearGradient id="uuid-09bb8713-f2ab-4fdb-9a8d-78377ed7915a" data-name="Dégradé sans nom 2" x1="38.63" y1="104.63" x2="105.75" y2="104.63" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cf89e0"/>
+      <stop offset="1" stop-color="#82368c"/>
+    </linearGradient>
+    <linearGradient id="uuid-d98107ef-b5e9-441b-b7ae-a6fb46dba6f0" data-name="Dégradé sans nom 2" y1="28.81" x2="105.75" y2="28.81" xlink:href="#uuid-09bb8713-f2ab-4fdb-9a8d-78377ed7915a"/>
+    <linearGradient id="uuid-75a478dc-28f1-429d-9e6b-8c3838dd8620" data-name="Dégradé sans nom 2" y1="72.75" x2="0" y2="72.75" xlink:href="#uuid-09bb8713-f2ab-4fdb-9a8d-78377ed7915a"/>
+  </defs>
+  <g id="uuid-7509f1c8-f1c2-440d-ba57-741baa245cdd" data-name="Calque 1">
+    <g>
+      <path class="uuid-e09cb583-45af-4e2e-aa9c-d572a504e458" d="M100.46,114.72l-51.77,16.89c-4.96,1.62-10.05-2.08-10.05-7.3v-28.05l57.07-18.61c4.96-1.62,10.05,2.08,10.05,7.3v22.49c0,3.32-2.14,6.27-5.29,7.3Z"/>
+      <path class="uuid-1165956d-f8c8-4be3-b0e2-6e0600f759a2" d="M100.46,37.46l-61.83,20.17V24.57c0-3.32,2.14-6.27,5.29-7.3L95.7,.38c4.96-1.62,10.05,2.08,10.05,7.3V30.17c0,3.32-2.14,6.27-5.29,7.3Z"/>
+      <path class="uuid-3da07e65-1736-45ef-8b57-21d421250c2c" d="M38.63,96.26L5.6,87c-3.31-.93-5.6-3.95-5.6-7.39v-22.69c0-5.08,4.85-8.76,9.75-7.39l28.88,8.1v38.63Z"/>
+    </g>
+  </g>
 </svg>
