@@ -5,7 +5,7 @@ class CelTest < ActiveSupport::TestCase
     @healthy_cel = cels(:healthy_cel)
     @unhealthy_cel = cels(:unhealthy_cel)
 
-    api_responses = YAML.load_file(Rails.root.join('test/support/healthcheck_api_response.yml')).deep_symbolize_keys
+    api_responses = YAML.load_file(Rails.root.join("test/support/healthcheck_api_response.yml")).deep_symbolize_keys
     @healthy_response = api_responses[:healthy]
     @unhealthy_response = api_responses[:unhealthy]
 

@@ -5,7 +5,7 @@ class Admin::CelsController < ApplicationController
 
   def index
     @cels = Cel.all
-    render inertia: 'admin/cels/index'
+    render inertia: "admin/cels/index"
   end
 
   def create
