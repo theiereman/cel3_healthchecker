@@ -68,8 +68,6 @@ export const CelCard = ({ cel }: { cel?: Cel | undefined }) => {
         )}
       </div>
       {success && <div className="text-green-500">CEL mis à jour</div>}
-      {errors.name && <div className="text-red-500">{errors.name}</div>}
-      {errors.url && <div className="text-red-500">{errors.url}</div>}
     </div>
   );
 };

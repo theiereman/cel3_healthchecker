@@ -5,7 +5,7 @@ class Admin::CelsController < ApplicationController
 
   def index
     @cels = Cel.all
-    render inertia: true
+    render inertia: 'admin/cels/index'
   end
 
   def create
@@ -14,7 +14,7 @@ class Admin::CelsController < ApplicationController
       if @cel.save
         redirect_to admin_cels_path, notice: "Cel was successfully created."
       else
-        render :new, status: :unprocessable_entity
+        redirect_to admin_cels_path, inertia: { errors: @cel.errors }
       end
   end
 
@@ -22,7 +22,7 @@ class Admin::CelsController < ApplicationController
       if @cel.update(cel_params)
         redirect_to admin_cels_path, notice: "Cel was successfully updated."
       else
-        render :edit, status: :unprocessable_entity
+        redirect_to admin_cels_path, inertia: { errors: @cel.errors }
       end
   end
 

@@ -3,6 +3,10 @@ require 'ostruct'
 class Cel < ApplicationRecord
   attr_reader :health_data
   
+  validates :name, presence: true
+  validates :url, presence: true, format: URI::regexp(%w[http https])
+  validates :url, format: { with: /health_check\.json\z/, message: "must end with /health_check.json" }
+  
   def check_health
     uri = URI.parse(self.url)
     res = Net::HTTP.get_response uri
