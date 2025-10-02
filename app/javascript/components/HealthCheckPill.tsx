@@ -1,6 +1,6 @@
 import { Cel } from "../interfaces/cel/cel.ts";
 
-export default function HealthCheckHeader({
+export default function HealthCheckPill({
   cel,
   error,
 }: {

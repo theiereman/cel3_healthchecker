@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 
 export const CelCard = ({ cel }: { cel?: Cel | undefined }) => {
   const [success, setSuccess] = useState(false);
-  const { data, setData, put, post, reset, processing, errors } = useForm({
+  const { data, setData, put, post, reset, processing } = useForm({
     id: cel?.id ?? 0,
     name: cel?.name ?? "",
     url: cel?.url ?? "",
@@ -51,7 +51,7 @@ export const CelCard = ({ cel }: { cel?: Cel | undefined }) => {
           <button
             type="submit"
             disabled={processing}
-            className={`${cel === undefined ? "bg-green-500" : "bg-blue-500"} p-2 rounded-lg text-white`}
+            className={`${cel === undefined ? "bg-green-500" : "bg-blue-500"} cursor-pointer p-2 rounded-lg text-white`}
           >
             {cel === undefined ? "Ajouter" : "Mettre à jour"}{" "}
           </button>
@@ -61,7 +61,7 @@ export const CelCard = ({ cel }: { cel?: Cel | undefined }) => {
             href={`/admin/cels/${cel.id}`}
             method={"delete"}
             data={{ cel: { name: cel.name, url: cel.url } }}
-            className="bg-red-500 p-2 rounded-lg text-white"
+            className="cursor-pointer bg-red-500 p-2 rounded-lg text-white"
           >
             Supprimer
           </Link>

@@ -19,7 +19,7 @@ export const Toggle = ({ className, onToggle, label }: ToggleProps) => {
     >
       <button
         onClick={handleToggle}
-        className="relative inline-flex h-6 w-11 items-center rounded-full focus:outline-none dark:focus:ring-blue-400 bg-gray-200 dark:bg-gray-700"
+        className="cursor-pointer relative inline-flex h-6 w-11 items-center rounded-full focus:outline-none dark:focus:ring-blue-400 bg-gray-200 dark:bg-gray-700"
         role="switch"
         aria-checked={isToggled}
       >

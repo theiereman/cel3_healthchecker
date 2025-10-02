@@ -22,7 +22,7 @@ const Navbar = () => {
         </Link>
       </div>
       <button
-        className="theme-toggle p-1 px-2 rounded-lg bg-neutral-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100"
+        className="cursor-pointer theme-toggle p-1 px-2 rounded-lg bg-neutral-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100"
         onClick={toggleTheme}
       >
         Passer en mode {isDarkMode ? "clair" : "sombre"}

@@ -77,21 +77,21 @@ export default function AutoRefreshToggle({
       />
       <div>
         <button
-          className={`${timeUnit === TimeUnitEnum.SEC ? "bg-neutral-200 dark:bg-slate-700" : "bg-neutral-100 dark:bg-slate-800"} p-1 px-2 rounded-tl-lg rounded-bl-lg ${isAutoRefreshEnabled ? "opacity-50 cursor-not-allowed" : ""}`}
+          className={`${timeUnit === TimeUnitEnum.SEC ? "bg-neutral-200 dark:bg-slate-700" : "bg-neutral-100 dark:bg-slate-800"} p-1 px-2 rounded-tl-lg rounded-bl-lg ${isAutoRefreshEnabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
           onClick={() => setTimeUnit(TimeUnitEnum.SEC)}
           disabled={isAutoRefreshEnabled}
         >
           sec
         </button>
         <button
-          className={`${timeUnit === TimeUnitEnum.MIN ? "bg-neutral-200 dark:bg-slate-700" : "bg-neutral-100 dark:bg-slate-800"} p-1 px-2 ${isAutoRefreshEnabled ? "opacity-50 cursor-not-allowed" : ""}`}
+          className={`${timeUnit === TimeUnitEnum.MIN ? "bg-neutral-200 dark:bg-slate-700" : "bg-neutral-100 dark:bg-slate-800"} p-1 px-2 ${isAutoRefreshEnabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
           onClick={() => setTimeUnit(TimeUnitEnum.MIN)}
           disabled={isAutoRefreshEnabled}
         >
           min
         </button>
         <button
-          className={`${timeUnit === TimeUnitEnum.H ? "bg-neutral-200 dark:bg-slate-700" : "bg-neutral-100 dark:bg-slate-800"} p-1 px-2 rounded-tr-lg rounded-br-lg ${isAutoRefreshEnabled ? "opacity-50 cursor-not-allowed" : ""}`}
+          className={`${timeUnit === TimeUnitEnum.H ? "bg-neutral-200 dark:bg-slate-700" : "bg-neutral-100 dark:bg-slate-800"} p-1 px-2 rounded-tr-lg rounded-br-lg ${isAutoRefreshEnabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
           onClick={() => setTimeUnit(TimeUnitEnum.H)}
           disabled={isAutoRefreshEnabled}
         >
