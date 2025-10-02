@@ -3,7 +3,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   scan_ruby:
@@ -74,6 +74,20 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install JavaScript dependencies
+        run: npm install
+
+      - name: Build Vite assets
+        run: bin/vite build --clear --mode=test
+
+      - name: Set up masterkey file
+        run: echo "${{ secrets.RAILS_MASTER_KEY }}" > config/master.key
 
       - name: Run tests
         env:
