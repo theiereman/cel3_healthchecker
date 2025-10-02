@@ -1,9 +1,7 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+healthy_cel:
+  name: DEMO (healthy)
+  url: https://demo.cel3.test.fr
 
-one:
-  name: MyString
-  url: MyString
-
-two:
-  name: MyString
-  url: MyString
+unhealthy_cel:
+  name: DEMO (unhealthy)
+  url: https://demo.cel3-unhealthy.test.fr

@@ -1,0 +1,153 @@
+healthy:
+  data: >
+    {
+      "healthy": true,
+      "available": true,
+      "message": "success",
+      "checkers_disabled": "edi",
+      "edi": {
+        "checker_disabled": true,
+        "healthy": false,
+        "available": true,
+        "message": "last edi started: 2025-09-29 15:00:29 +0000; last edi complete: 2025-09-30 08:49:46 +0000;",
+        "meta": {
+          "last_edi": "2025-09-29T15:00:29.969+00:00",
+          "last_complete_edi": "2025-09-30T08:49:46.153+00:00"
+        }
+      },
+      "worker": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "success",
+        "meta": {
+          "queue_growing": false,
+          "workers": 1,
+          "processed": 0,
+          "failed": 0,
+          "enqueued": 0,
+          "scheduled": 0,
+          "retries": 0,
+          "dead": 0
+        }
+      },
+      "ged": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "success",
+        "meta": {
+          "adapter": "adhoc_ged",
+          "enabled": true,
+          "temporary_disabled": false,
+          "server": "ascora-recette.extra.ged-adhoc.com",
+          "port": 443,
+          "message": ""
+        }
+      },
+      "maintenance": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "success",
+        "meta": {}
+      },
+      "key": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "Private key is still present",
+        "meta": {}
+      },
+      "fixuuidapi": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "success",
+        "meta": {}
+      },
+      "fva": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "Last time the FVA answer correctly was never",
+        "meta": { "enabled": false, "last_call": null }
+      }
+    }
+
+unhealthy:
+  data: >
+    {
+      "healthy": false,
+      "available": true,
+      "message": "ged: disabled until 2025-10-02 07:09:11 UTC",
+      "checkers_disabled": "",
+      "edi": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "last edi started: 2025-10-02 01:00:14 +0000; last edi complete: 2025-10-02 01:40:47 +0000;",
+        "meta": {
+          "last_edi": "2025-10-02T01:00:14.554+00:00",
+          "last_complete_edi": "2025-10-02T01:40:47.412+00:00"
+        }
+      },
+      "worker": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "success",
+        "meta": {
+          "queue_growing": false,
+          "workers": 1,
+          "processed": 361,
+          "failed": 0,
+          "enqueued": 0,
+          "scheduled": 0,
+          "retries": 0,
+          "dead": 0
+        }
+      },
+      "ged": {
+        "checker_disabled": false,
+        "healthy": false,
+        "available": true,
+        "message": "disabled until 2025-10-02 07:09:11 UTC",
+        "meta": {
+          "adapter": "adhoc_ged",
+          "enabled": true,
+          "temporary_disabled": true,
+          "server": "adh-production.extra.ged-adhoc.com",
+          "port": 8444,
+          "message": "disabled until 2025-10-02 07:09:11 UTC"
+        }
+      },
+      "maintenance": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "success",
+        "meta": {}
+      },
+      "key": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "Private key is still present",
+        "meta": {}
+      },
+      "fixuuidapi": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "success",
+        "meta": {}
+      },
+      "fva": {
+        "checker_disabled": false,
+        "healthy": true,
+        "available": true,
+        "message": "Last time the FVA answer correctly was 2025-10-01 11:37:45 UTC",
+        "meta": { "enabled": true, "last_call": "2025-10-01T11:37:45.976Z" }
+      }
+    }
