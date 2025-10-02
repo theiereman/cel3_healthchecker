@@ -58,6 +58,10 @@ Pour lancer les tests (Minitest) :
 rails test
 ```
 
+# CI/CD
+
+Les tests de la CI utilisent le secret `$RAILS_MASTER_KEY` pour lancer les tests de controlleurs qui doivent être authentifiés (admin). Il est donc important de mettre à jour ce secret si jamais la clé `master.key` venait à chagner dans le projet.
+
 # Déploiement
 
 Aucun déploiement en production n'a été fait pour le moment mais il est possible de déployer avec Kamal qui est déjà une dépendance du projet. Cela permet d'automatiser le déploiement avec Github / Gitlab en utilisant docker.
